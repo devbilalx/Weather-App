@@ -1,0 +1,133 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poopins','sans-serif';
+}
+
+body{
+    background: #222;;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+ 
+
+}
+
+
+.weather{
+    max-width: 450px;
+    width: 90%;
+
+    margin-top: 100px;
+    background: linear-gradient(135deg,#00feba,#5b548a);
+    color: #fff;
+    border-radius: 15px;
+
+}
+
+.search{
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+}
+
+.search input{
+    border: 0;
+    outline: 0;
+    padding: 10px 20px;
+    border-radius: 30px;
+    background: #ebfffc;
+    height: 40px;
+    color: #555;
+    font-size: 16px;
+}
+.search button{
+    outline: 0;
+    border: 0;
+    background: #ebfffc;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    margin-top: 3px;
+}
+
+.search button img{
+    background: none;
+    width: 40px;
+    border-radius: 50%;
+
+}
+
+.all{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    border: 0;
+    outline: 0;
+}
+
+.col{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+    width: 80%;
+    padding: 10px 16px;
+    transition: 0.3 ease;
+    justify-content: flex-start;
+}
+
+.col:hover{
+    background: rgba(255, 255, 255, 0.25);
+}
+
+
+.col img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%  ;
+    object-fit: cover;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 8px;
+    backdrop-filter: blur(3px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+
+
+}
+.weathericon{
+    width: 120px;
+    height: 120px;
+    margin: 10px 0  ;
+    border-radius: 50%;
+    object-fit: cover;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 12px;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.weathericon:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.5);
+}
+
+.temp {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.city {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
