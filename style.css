@@ -1,50 +1,53 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Poopins','sans-serif';
+    font-family: 'Poppins', sans-serif;
 }
 
-body{
-    background: #222;;
+body {
+    background: #222;
 }
 
-.main{
+/* Main wrapper */
+.main {
     display: flex;
     justify-content: center;
- 
-
+    padding: 20px;
 }
 
-
-.weather{
+/* Weather card */
+.weather {
     max-width: 450px;
-    width: 90%;
-
-    margin-top: 100px;
-    background: linear-gradient(135deg,#00feba,#5b548a);
+    width: 100%;
+    margin-top: 80px;
+    background: linear-gradient(135deg, #00feba, #5b548a);
     color: #fff;
     border-radius: 15px;
-
+    padding: 20px;
 }
 
-.search{
+/* Search bar */
+.search {
     display: flex;
-    justify-content: space-around;
-    padding: 30px;
+    align-items: center;
+    gap: 12px;
+    padding: 20px 0;
 }
 
-.search input{
+.search input {
+    flex: 1;
     border: 0;
     outline: 0;
-    padding: 10px 20px;
+    padding: 10px 16px;
     border-radius: 30px;
     background: #ebfffc;
     height: 40px;
     color: #555;
     font-size: 16px;
 }
-.search button{
+
+.search button {
     outline: 0;
     border: 0;
     background: #ebfffc;
@@ -52,59 +55,57 @@ body{
     width: 40px;
     height: 40px;
     cursor: pointer;
-    margin-top: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.search button img{
-    background: none;
-    width: 40px;
-    border-radius: 50%;
-
+.search button img {
+    width: 20px;
 }
 
-.all{
+/* Weather Info */
+.all {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 18px;
-    border: 0;
-    outline: 0;
 }
 
-.col{
+/* Cards */
+.col {
     display: flex;
     align-items: center;
     gap: 10px;
     margin-top: 10px;
     background: rgba(255, 255, 255, 0.15);
     border-radius: 15px;
-    width: 80%;
+    width: 100%;
     padding: 10px 16px;
-    transition: 0.3 ease;
+    transition: 0.3s ease;
     justify-content: flex-start;
 }
 
-.col:hover{
+.col:hover {
     background: rgba(255, 255, 255, 0.25);
 }
 
-
-.col img{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%  ;
+.col img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
     object-fit: cover;
     background: rgba(255, 255, 255, 0.15);
     padding: 8px;
     backdrop-filter: blur(3px);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-
-
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
-.weathericon{
+
+/* Weather Icon */
+.weathericon {
     width: 120px;
     height: 120px;
-    margin: 10px 0  ;
+    margin: 10px 0;
     border-radius: 50%;
     object-fit: cover;
     background: rgba(255, 255, 255, 0.15);
@@ -113,11 +114,13 @@ body{
     box-shadow: 0 4px 12px rgba(0,0,0,0.4);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .weathericon:hover {
     transform: scale(1.08);
     box-shadow: 0 6px 16px rgba(0,0,0,0.5);
 }
 
+/* Text */
 .temp {
     font-size: 3rem;
     font-weight: bold;
@@ -131,20 +134,56 @@ body{
     color: #ffffff;
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
 }
+
+/* ✅ Responsiveness */
+
+/* Tablets */
+@media (max-width: 768px) {
+    .weather {
+        margin-top: 50px;
+        padding: 15px;
+    }
+    .temp {
+        font-size: 2.5rem;
+    }
+    .city {
+        font-size: 1.4rem;
+    }
+    .col img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Mobile */
 @media (max-width: 480px) {
     .weather {
-        padding: 18px;
+        margin-top: 40px;
+        padding: 12px;
     }
-
-    .temp {
-        font-size: 2.3rem;
+    .search {
+        flex-direction: column;
+        gap: 10px;
     }
-
-    .city {
-        font-size: 1.3rem;
-    }
-
-    .col {
+    .search input {
         width: 100%;
+        font-size: 14px;
+    }
+    .search button {
+        width: 100%;
+        height: 40px;
+        border-radius: 10px;
+    }
+    .search button img {
+        width: 18px;
+    }
+    .temp {
+        font-size: 2.2rem;
+    }
+    .city {
+        font-size: 1.2rem;
+    }
+    .col {
+        padding: 8px 12px;
     }
 }
